@@ -1,16 +1,16 @@
 let markersURLArray = [];
 let markersNameArray = [];
 
-const POSTER_ARRAY = ["cover", "1", "2", "3", "4", "5"];
+const POSTER_ARRAY = ["cover", "1", "2", "3", "4", "5", "qr"];
 
 AFRAME.registerComponent("markers_start", {
   init: function () {
-    console.log("Add markers to the scene");
+    // console.log("Add markers to the scene");
 
     let sceneEl = document.querySelector("a-scene");
 
     // List of the markers
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 8; i++) {
       let url = "markers/patt/pattern-" + i + ".patt";
 
       markersURLArray.push(url);
@@ -18,7 +18,7 @@ AFRAME.registerComponent("markers_start", {
       console.log(url);
     }
 
-    for (let k = 0; k < 6; k++) {
+    for (let k = 0; k < 7; k++) {
       let markerEl = document.createElement("a-marker");
       markerEl.setAttribute("type", "pattern");
       markerEl.setAttribute("url", markersURLArray[k]);
